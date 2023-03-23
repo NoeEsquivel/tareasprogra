@@ -15,14 +15,16 @@ class CreateCamionTable extends Migration
     {
         Schema::create('camion', function (Blueprint $table) {
             $table->id();
-            $table->string('id_placa_camion', 75)->unique;
-            $table->string('placa_camion', 6);
-            $table->string('marca', 45);
-            $table->string('color', 25);
-            $table->string('modelo', 45);
-            $table->string('capacidad', 45);
-            $table->string('transporte_codigo', 45);
+            $table->foreignId('transporte_codigo')->constrained('transporte');
+            $table->integer('id_placa');
+            $table->String('placa_camion',6);
+            $table->String('marca',45);
+            $table->String('color',25);
+            $table->Date('modelo');
+            $table->integer('capacidad_toneladas');
+
             $table->timestamps();
+
         });
     }
 

@@ -10,6 +10,6 @@ class transporteu extends Model
     use HasFactory;
 
     public function camion() {
-        return $this->hasMany(union::class, 'id')
+        return $this->hasMany(union::class, 'id');
     }
 }

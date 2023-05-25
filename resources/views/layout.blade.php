@@ -14,3 +14,13 @@
         </div>
 </body>
 </html>
+@section('js')
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+
+        swal("¡Ventana emergente!");
+
+
+    </script>
+@endsection
